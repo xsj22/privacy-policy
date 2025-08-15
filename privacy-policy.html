@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《你的App名称》隐私政策</title>
+  <style>
+    :root { --fg:#111; --muted:#555; --bg:#fff; --card:#fafafa; --border:#eaeaea; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif; color:var(--fg); background:var(--bg); line-height:1.65}
+    .wrap{max-width:900px; margin:0 auto; padding:24px 16px 64px}
+    header{position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--border); padding:12px 0; margin-bottom:16px}
+    h1{font-size:28px; margin:0 0 6px}
+    .muted{color:var(--muted); font-size:14px}
+    nav{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px; margin:16px 0 24px}
+    nav a{display:block; color:#0b57d0; text-decoration:none; padding:6px 4px}
+    nav a:hover{text-decoration:underline}
+    section{padding:16px; border:1px solid var(--border); border-radius:12px; background:var(--bg); margin:14px 0}
+    h2{font-size:20px; margin:0 0 8px}
+    h3{font-size:16px; margin:18px 0 6px}
+    ul{margin:8px 0 8px 20px}
+    code, .chip{background:var(--card); border:1px solid var(--border); border-radius:999px; padding:2px 8px; font-size:12px}
+    footer{margin-top:32px; font-size:13px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>《你的App名称》隐私政策</h1>
+      <div class="muted">最后更新日期：<span id="lastUpdated">2025-08-15</span>　|　版本：<span id="version">v1.0</span></div>
+      <div class="muted">适用平台：Android　|　运营主体：你的公司/个人名称</div>
+    </header>
+
+    <p>我们非常重视您的个人信息和隐私保护。本《隐私政策》旨在向您说明在您使用 <strong>你的App名称</strong>（以下简称“本应用”）及相关服务时，我们如何收集、使用、存储、共享和保护您的个人信息，以及您所享有的权利。请在使用前仔细阅读并充分理解本政策。</p>
+
+    <nav>
+      <strong>目录</strong>
+      <a href="#scope">一、适用范围</a>
+      <a href="#collect">二、我们如何收集与使用信息</a>
+      <a href="#sdk">三、第三方SDK 与数据共享</a>
+      <a href="#perm">四、设备权限使用说明</a>
+      <a href="#store">五、信息存储、期限与地点</a>
+      <a href="#security">六、信息安全</a>
+      <a href="#rights">七、您的权利</a>
+      <a href="#child">八、未成年人保护</a>
+      <a href="#change">九、政策更新</a>
+      <a href="#contact">十、联系我们</a>
+    </nav>
+
+    <section id="scope">
+      <h2>一、适用范围</h2>
+      <p>本政策适用于您通过 Google Play 安装并使用本应用及其提供的功能与服务。</p>
+    </section>
+
+    <section id="collect">
+      <h2>二、我们如何收集与使用信息</h2>
+      <p>我们仅在实现产品功能、改进服务、遵守法律法规所必需的前提下收集与使用信息。</p>
+      <h3>1. 业务功能所必需</h3>
+      <ul>
+        <li><strong>账号注册与登录</strong>：如手机号/邮箱、验证码、密码散列值、账号 ID。</li>
+        <li><strong>应用运行</strong>：设备信息（如设备型号、系统版本、唯一设备标识符 <span class="chip">Android ID</span>/<span class="chip">IMEI*</span>）、日志信息（崩溃、异常）。</li>
+        <li><strong>音视频/语音识别（如适用）</strong>：麦克风采集的音频数据仅用于语音转写/指令识别，不用于识别个人身份。</li>
+        <li><strong>蓝牙/外设连接（如适用）</strong>：为实现与硬件设备连接与数据传输，采集设备的蓝牙信息（如附近设备、信号强度）。</li>
+        <li><strong>推送通知（如适用）</strong>：接收系统推送的设备标识符（如 FCM Token）。</li>
+      </ul>
+      <p style="font-size:13px" class="muted">* 说明：自 Android 10 起，应用通常无法直接访问 IMEI；如确需收集，将在显著位置征得您的单独同意。</p>
+      <h3>2. 改进与统计</h3>
+      <ul>
+        <li>为提升稳定性与体验，我们可能进行匿名化统计分析（如使用频次、崩溃率）。</li>
+      </ul>
+      <h3>3. 征得授权</h3>
+      <p>除非另有说明，我们不会在未取得您授权的情况下处理与上述目的无关的个人信息。</p>
+    </section>
+
+    <section id="sdk">
+      <h2>三、第三方 SDK 与数据共享</h2>
+      <p>为实现部分功能，我们可能接入第三方 SDK。我们将审慎评估其数据处理行为，并仅在必要范围内共享信息。主要第三方如下（示例，按实际使用填写/删减）：</p>
+      <ul>
+        <li><strong>Google Firebase（统计/推送）</strong>：可能收集设备标识、应用使用数据、崩溃日志。<br/>用途：分析与消息推送；数据由 Google 依据其隐私政策处理。</li>
+        <li><strong>科大讯飞 iFLYTEK（语音识别/合成）</strong>：可能处理语音数据用于识别与合成。<br/>用途：语音转写与播报；仅为实现语音功能所需。</li>
+        <li><strong>（如有）支付/地图/登录 SDK</strong>：按功能收集必要信息。</li>
+      </ul>
+      <p>除法律法规或履行法定要求外，未经您同意我们不会向第三方出售或出租您的个人信息。</p>
+    </section>
+
+    <section id="perm">
+      <h2>四、设备权限使用说明</h2>
+      <p>我们会在首次调用时弹窗请求并说明用途，您可在系统设置中随时管理权限。</p>
+      <ul>
+        <li><strong>麦克风</strong>：语音输入/识别。</li>
+        <li><strong>蓝牙/附近设备</strong>：连接外围硬件。</li>
+        <li><strong>存储/照片与媒体</strong>：读取/保存图片、日志或缓存。</li>
+        <li><strong>相机</strong>：拍摄或实时识别。</li>
+        <li><strong>通知</strong>：接收推送消息。</li>
+        <li><strong>定位（如有）</strong>：基于蓝牙扫描或提供位置相关服务时可能需要近似/精确定位。</li>
+      </ul>
+    </section>
+
+    <section id="store">
+      <h2>五、信息存储、期限与地点</h2>
+      <ul>
+        <li><strong>存储地点</strong>：默认存储于 你的主要数据存储地区（例如 日本/新加坡/中国香港）（如使用云服务，将选择与业务相匹配的数据中心）。</li>
+        <li><strong>存储期限</strong>：仅在达成目的所需的最短期间内保存；超期或您主动删除/注销后，我们将及时删除或匿名化处理。</li>
+        <li><strong>跨境传输</strong>：如涉及向境外传输，我们将依法采取必要措施并征得您的授权。</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>六、信息安全</h2>
+      <ul>
+        <li>采用加密传输（HTTPS/TLS）、访问控制、最小化授权等措施保护数据安全。</li>
+        <li>建立安全事件应急预案；一旦发生安全事件，我们将按照法律法规履行告知义务。</li>
+      </ul>
+    </section>
+
+    <section id="rights">
+      <h2>七、您的权利</h2>
+      <p>您可以通过应用内或联系我们行使以下权利：</p>
+      <ul>
+        <li>访问、更正、删除个人信息；</li>
+        <li>撤回同意、管理授权；</li>
+        <li>获取账号注销与数据可携带（如适用）；</li>
+        <li>获取本政策的最新版本。</li>
+      </ul>
+    </section>
+
+    <section id="child">
+      <h2>八、未成年人保护</h2>
+      <p>本应用主要面向成年人。如您为未满法定年龄的未成年人，请在监护人同意和指导下使用。</p>
+    </section>
+
+    <section id="change">
+      <h2>九、政策更新</h2>
+      <p>当本政策发生重大变更（如处理目的、类型、共享对象、用户权利变化等），我们会通过应用内弹窗或页面公告进行显著提示，并再次征求您的同意（如适用）。</p>
+    </section>
+
+    <section id="contact">
+      <h2>十、联系我们</h2>
+      <p>运营主体：深圳新世界跨界科技有限公司</p>
+      <p>联系邮箱：<a href="mailto:support@example.com">electronhongkong@gmail.com</a></p>
+      <p>联系地址：廣東省深圳市南山區广东深圳市前海自贸区香缤前海国际金融中心11楼）</p>
+    </section>
+
+    <footer>
+      <p>提示：此模板包含通用条款。发布前请根据实际业务、所接入 SDK、数据类型与地区法规进行补充/删改。</p>
+    </footer>
+  </div>
+</body>
+</html>
